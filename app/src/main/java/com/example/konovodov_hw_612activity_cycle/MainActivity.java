@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         newPrepareContent(getPref());
         initView();
 
-        simpleAdapter = (SimpleAdapter) createSimpleAdapter(mapList);
+        simpleAdapter =  createSimpleAdapter(mapList);
         list.setAdapter(simpleAdapter);
 
 
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     }
 
     @NonNull
-    private BaseAdapter createSimpleAdapter(List<Map<String, String>> values) {
+    private SimpleAdapter createSimpleAdapter(List<Map<String, String>> values) {
         return new SimpleAdapter(this, values, R.layout.activity_main,
                 new String[]{KEY_1, KEY_2}, new int[]{R.id.oneTttv, R.id.twoTttv});
 
